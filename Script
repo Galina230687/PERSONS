@@ -1,0 +1,21 @@
+create table PERSONS (
+
+name text not null,
+surname text not null,
+age int not null,
+PRIMARY KEY (name, surname, age),
+phone_number int,
+city_of_living text
+
+);
+
+ALTER TABLE persons
+ALTER COLUMN phone_number TYPE bigint;
+
+INSERT INTO persons (name, surname, age, phone_number, city_of_living)
+VALUES 
+('Ivan', 'Ivanov', 30, 1234567890, 'MOSCOW'),
+('Anna', 'Petrova', 25, 9876543210, 'SAINT-PETERSBURG'),
+('Oleg', 'Sidorov', 40, 5678901234, 'MOSCOW'),
+('Maria', 'Smirnova', 35, 1230987654, 'NOVOSIBIRSK'),
+('Dmitry', 'Kuznetsov', 28, 4321098765, 'MOSCOW');
